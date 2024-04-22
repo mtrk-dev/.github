@@ -34,7 +34,7 @@ To learn more, please take a look at the mtrk [Documentation](https://mtrk-dev.g
 
 ## Installation
 
-The install script is available here. 
+To do.
 
 ## SDL file format
 
