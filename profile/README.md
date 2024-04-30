@@ -34,7 +34,38 @@ To learn more, please take a look at the mtrk [Documentation](https://mtrk-dev.g
 
 ## Installation
 
-To do.
+### Test Installation (using Vagrant)
+
+A quick test installation of the MTRK tools can be done using Vagrant, which will provision a VM and install the software automatically into the VM.
+
+Install both VirtualBox (https://www.virtualbox.org) and Vagrant (https://www.vagrantup.com) on your host computer. This can be done using any computer with an Intel chipset (Windows, Linux, Intel-based Apple Mac).
+
+Clone the MTRK Designer GUI repository into a folder on your computer:
+
+`git clone https://github.com/mtrk-dev/mtrk_designer_gui.git`
+
+Change the directory and run the vagrant command:
+
+```
+cd mtrk_designer_gui
+vagrant up
+```
+
+This will create a new VM and install all required dependencies. Once the installation has finished, the MTRK Designer GUI and MTRK Viewer Software can be accessed by opening the URLs `127.0.0.1:5010` and `127.0.0.1:6010` respectively in a modern browser (Firefox or Chrome).
+
+### Server Installation
+
+Automatic installation on a production server can be done using a provided installation script. MTRK currently requires **Ubuntu 22.04 LTS** as the operating system.
+
+Check out the repositories on the server and start the installation:
+```
+cd /opt
+git clone --depth 1 https://github.com/mtrk-dev/mtrk_viewer.git
+git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_gui.git
+cd mtrk_designer_gui/app
+git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
+sudo bash /opt/mtrk_designer_gui/install.sh
+```
 
 ## SDL file format
 
