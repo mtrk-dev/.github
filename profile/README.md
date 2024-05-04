@@ -1,6 +1,8 @@
 ## ISMRM 2024 
-Abstract number 4671, "mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards".
+Abstract number 4671, "mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards". (https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911)
+
 Please meet me (Anais Artiges) at computer 33 during the Software tools session on Thursday (14h45). 
+
 Contact: anais.artiges@nyulangone.org
 
 ## What is mtrk?
