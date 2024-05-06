@@ -27,6 +27,16 @@ mtrk uses a highly modular design in which sequences are formulated using a Sequ
   <img src="profile/mtrk_sdl.png" width="886"/>
 </p>
 
+## Accessibility
+
+mtrk provides a graphical user interface (mtrk_designer_gui), which enables the development of pulse sequences in an intuitive way without programming. This web-based GUI is intended to be used both for education and training, as well as for research applications later on. It has for now been used to implement simple sequences, such as spin echo and gradient echo with single line readout, but will soon be able to handle more complex ones. 
+
+To improve accessibility, the SDL format can be converted to Pulseq, which is already widely used in open-source pulse sequence programming. We are also working on a converter from Pulseq to SDL to make the connexion between the two formats smoother. 
+
+<p align="center">
+  <img src="profile/mtrk_ui.png" width="886"/>
+</p>
+
 ## Reproducibility
 
 When executing an mtrk sequence, the MRI scanner plays out the instructions and pulses contained in the mtrk file. This means that the pulse sequence is entirely defined by the mtrk file and not dependent on the specific MRI software version used during data acquisition. Hence, researchers can reproduce scientific results at a later time or at a different location because the mtrk file can be easily archived or distributed. Because the SDL format is decoupled from the vendor SDKs, the mtrk files can be shared in Git repositories attached to publications without violating license agreements, and they do not require refactoring for every software update installed on the MRI scanners.
