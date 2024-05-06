@@ -86,8 +86,4 @@ git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 sudo bash /opt/mtrk_designer_gui/install.sh
 ```
 
-## SDL file format
-
-The .mtrk files describe MRI pulse sequences using the light-weight human-readable Sequence Desciption Language (SDL) based on Json. The file structure includes seven sections allowing for the definition of technical and sequence specifications, reconstruction information, main sequence structure, and corresponding arrays or equations. 
-
 
