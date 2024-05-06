@@ -53,7 +53,7 @@ To learn more, please take a look at the mtrk [Documentation](https://mtrk-dev.g
 
 ### Test Installation (using Vagrant)
 
-A quick test installation of the MTRK tools (protoype state) can be done using Vagrant, which will provision a VM and install the software automatically into the VM.
+A quick test installation of the MTRK tools (prototype state) can be done using Vagrant, which will provision a VM and install the software automatically into the VM.
 
 Install both VirtualBox (https://www.virtualbox.org) and Vagrant (https://www.vagrantup.com) on your host computer. This can be done using any computer with an Intel chipset (Windows, Linux, Intel-based Apple Mac).
 
