@@ -86,7 +86,7 @@ sudo bash /opt/mtrk_designer_gui/install.sh
 ### Acknowledgements
 
 <p align="center">
-  <img src="cloud_mr_logo.png" width="886"/>
+  <img src="cloud_mr_logo.png" width="200"/>
 </p>
 
 mtrk is part of Cloud MR, a multi-year project aimed at developing a comprehensive software platform to simulate all aspects of the MRI experiment. This research project is supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) of the National Institutes of Health (NIH) under the Awards R01 EB024536 (PI: Riccardo Lattanzi).
