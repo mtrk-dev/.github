@@ -14,7 +14,7 @@ mtrk takes the shape of an open-source framework for MRI pulse sequence developm
 A conversion tool is also available in mtrk_designer_api to transform .mtrk files into Pulseq files, allowing for the use of any Pulseq-based external tool.  
 
 <p align="center">
-  <img src=".github/profile/mtrk_overview.png" width="529"/>
+  <img src="mtrk_overview.png" width="529"/>
 </p>
 
 ## Flexibility
@@ -22,7 +22,7 @@ A conversion tool is also available in mtrk_designer_api to transform .mtrk file
 mtrk uses a highly modular design in which sequences are formulated using a Sequence Description Language (SDL) based on the common JSON syntax. The SDL is un-opinionated, meaning that multiple ways for formulating one sequence exist. Moreover, the SDL makes no assumption on how the SDL files have to be generated, giving researchers the freedom of choice regarding which programming language they want to use for their sequence development projects. Moreover, because the SDL is a common text-based format, the sequence calculation can be done on any operating system and on any computer, ranging from the MRI scanner’s console computer over local research servers to cloud instances.
 
 <p align="center">
-  <img src="profile/mtrk_sdl.png" width="886"/>
+  <img src="mtrk_sdl.png" width="886"/>
 </p>
 
 ## Accessibility
@@ -32,7 +32,7 @@ mtrk provides a graphical user interface (mtrk_designer_gui), which enables the 
 To improve accessibility, the SDL format can be converted to Pulseq, which is already widely used in open-source pulse sequence programming. We are also working on a converter from Pulseq to SDL to make the connexion between the two formats smoother. 
 
 <p align="center">
-  <img src="profile/mtrk_ui.png" width="886"/>
+  <img src="mtrk_ui.png" width="886"/>
 </p>
 
 ## Reproducibility
@@ -86,7 +86,7 @@ sudo bash /opt/mtrk_designer_gui/install.sh
 ### Acknowledgements
 
 <p align="center">
-  <img src="profile/cloud_mr_logo.png" width="886"/>
+  <img src="cloud_mr_logo.png" width="886"/>
 </p>
 
 mtrk is part of Cloud MR, a multi-year project aimed at developing a comprehensive software platform to simulate all aspects of the MRI experiment. This research project is supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) of the National Institutes of Health (NIH) under the Awards R01 EB024536 (PI: Riccardo Lattanzi).
