@@ -1,8 +1,3 @@
-## ISMRM 2024 
-Abstract number 4671, "mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards". (https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911). Includes a video demo of the software.
-
-Contact: anais.artiges@nyulangone.org
-
 ## What is mtrk?
 
 mtrk is a novel concept for developing and working with pulse sequences in Magnetic Resonance Imaging (MRI). Traditionally, MRI pulse sequences are developed as dynamically loadable binary libraries, programmed using vendor-provided proprietary SDKs. These monolithic SDKs are complex, barely documented, and only in part accessible to external developers and members of the MRI research community. This makes MRI development very challenging - on the one hand because only few researchers manage to work with the SDKs, on the other hand because frequent invasive changes to the vendor SDKs create significant maintenance effort. Furthermore, strict license agreements make dissemination of research developments impossible and contend with the idea of reproducible research.
@@ -83,6 +78,13 @@ cd mtrk_designer_gui/app
 git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 sudo bash /opt/mtrk_designer_gui/install.sh
 ```
+
+## ISMRM 2024
+
+"mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards". (https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911). Includes a video demo of the software.
+
+Contact: anais.artiges@nyulangone.org
+
 ### Acknowledgements
 
 <p align="center">
