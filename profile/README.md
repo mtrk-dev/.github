@@ -79,9 +79,37 @@ git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 sudo bash /opt/mtrk_designer_gui/install.sh
 ```
 
-## ISMRM 2024
+## Getting started
 
-"mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards". (https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911). Includes a video demo of the software.
+This is a quick guide to getting started with mtrk. It covers how to use the GUI to import and modify a sequence described in an SDL file, how to use the viewer to visualize it, and how to run the converter to generate the corresponding Pulseq file. 
+
+### mtrk designer
+- After turning the vagrant VM on, load the mtrk GUI in a web browser at guest port 5010/5000 (please check your corresponding host port with "vagrant port").
+- Choose between dar and light mode for your comfort.
+- Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
+- Click on it to access its parameters.
+- Click on the "reset" button.
+- You can do the same for RF pulses and ADC events. 
+- Import the "gre2d.mtrk" file provided in ??? using the upload button.
+- Check the structure of the sequence with the "loops" button.
+- Check the header of the sequence ie with the "settings" button.
+- Select "block_TR" in the block browser.
+- Add an RF event starting at 5.1ms on the RF axis, name it "refocusing_pulse", slect its type as "Refocusing", give it a flip angle of 180 degrees, and select "rf_pulse" and "rf_phase" for its amplitude and phase arrays.
+- Add a gradient just under this RF pulse on the Slice axis, name it "slice_sel_refocusing", put its start time at 5ms, its amplitude at 4.95mT/m, and select the "grad_100_2650_100" array.
+
+
+## Related publications
+
+### Journal papers
+- Artiges A, Singh Saimbhi A, Castillo-Passi C, Lattanzi R, and Block KT, mtrk - A flexible environment for developing open-source MRI pulse sequences, submitted to MRM in March 2025.
+
+### Conferences
+- Artiges A., Singh Saimbhi A., Wiggins R., Lattanzi R., and Block KT., mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards. International Society for Magnetic Resonance in Medicine (ISMRM, 2024) - Poster presentation.(https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911). Includes a video demo of the software.
+- Artiges A, Singh Saimbhi A, Wiggins R, Castillo-Passi C, Montin E, Giannakopoulos I, Lattanzi R, and Block KT, mtrk – An intuitive and open-source development kit for MRI pulse sequences. MRI Together workshop 2025 - Oral presentation. (Best abstract award - 2nd place, recording on YouTube: https://www.youtube.com/watch?v=KraT1FKSTcc)
+- Artiges A, Singh Saimbhi A, Wiggins R, Castillo-Passi C, Montin E, Giannakopoulos I, Lattanzi R, and Block KT, mtrk - Un environnement intuitif pour le développement de séquences IRM libres de droits. Bi-annual meeting of the SFRMBM (France) 2025 - Poster presentation.
+- Artiges A, Singh Saimbhi A, Castillo-Passi C, Montin E, Giannakopoulos I, Lattanzi R, and Block KT, Comparison of mtrk, Pulseq, and vendor sequences using simulated, phantom, and in-vivo acquisitions.  International Society for Magnetic Resonance in Medicine (ISMRM, 2025) - Oral presentation.
+
+
 
 Contact: anais.artiges@nyulangone.org
 
