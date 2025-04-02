@@ -84,18 +84,43 @@ sudo bash /opt/mtrk_designer_gui/install.sh
 This is a quick guide to getting started with mtrk. It covers how to use the GUI to import and modify a sequence described in an SDL file, how to use the viewer to visualize it, and how to run the converter to generate the corresponding Pulseq file. 
 
 ### mtrk designer
-- After turning the vagrant VM on, load the mtrk GUI in a web browser at guest port 5010/5000 (please check your corresponding host port with "vagrant port").
-- Choose between dar and light mode for your comfort.
+
+<p align="center">
+  <img src="MtrkTutoDesigner.jpg" width="886"/>
+</p>
+
+- After turning the vagrant VM on, load the mtrk designer in a web browser at guest port 5000/5010 (please check your corresponding host port with "vagrant port").
+- Choose between dark and light mode for your comfort.
 - Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
 - Click on it to access its parameters.
-- Click on the "reset" button.
+- Close the parameters window.
 - You can do the same for RF pulses and ADC events. 
+- Click on the "reset" button and confirm you want to reset the page.
 - Import the "gre2d.mtrk" file provided in ??? using the upload button.
 - Check the structure of the sequence with the "loops" button.
 - Check the header of the sequence ie with the "settings" button.
 - Select "block_TR" in the block browser.
-- Add an RF event starting at 5.1ms on the RF axis, name it "refocusing_pulse", slect its type as "Refocusing", give it a flip angle of 180 degrees, and select "rf_pulse" and "rf_phase" for its amplitude and phase arrays.
-- Add a gradient just under this RF pulse on the Slice axis, name it "slice_sel_refocusing", put its start time at 5ms, its amplitude at 4.95mT/m, and select the "grad_100_2650_100" array.
+- Add an RF event starting at 5.1ms on the RF axis, name it "refocusing_pulse", slect its type as "Refocusing", give it a flip angle of 180 degrees, and select "rf_pulse" and "rf_phase" for its amplitude and phase arrays. Save the changes. 
+- Add a gradient just under this RF pulse on the Slice axis, name it "slice_sel_refocusing", put its start time at 5ms, its amplitude at 4.95mT/m, and select the "grad_100_2650_100" array. Save the changes.
+- Click on the "Download" button to download an updated SDL file "output_sdl_file.mtrk".
+- (Optional) Open both SDL files (gre2d.mtrk and output_sdl_file.mtrk) and compare them.
+
+### mtrk viewer
+
+<p align="center">
+  <img src="MtrkTutoViewer.jpg" width="886"/>
+</p>
+
+- Load the mtrk viewer in a web browser at guest port 6010 (please check your corresponding host port with "vagrant port").
+- Upload the "gre2d.mtrk" file.
+- Use the zoom options to zoom on an elementary pattern of the sequence.
+- Hover over RF pulses, gradients, and ADC events to check their names and amplitudes.
+- Do the same with the "output_dsl_file.mtrk" and verify that the changes are properly reflected.
+
+### Conversion to pulseq
+- Go to "mtrk_designer_gui/app/mtrk_designer_api" and open 
+
+
 
 
 ## Related publications
