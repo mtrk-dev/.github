@@ -87,7 +87,7 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
   <img src="MtrkTutoDesigner.jpg" width="886"/>
 </p>
 
-- After turning the vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with "vagrant port" if this is not working).
+- After turning the vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with `vagrant port` if this is not working).
 - Choose between dark and light mode for your comfort.
 - Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
 - Click on it to access its parameters.
@@ -114,7 +114,7 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
   <img src="MtrkTutoViewer.jpg" width="886"/>
 </p>
 
-- Load the mtrk viewer in a web browser at the URL `127.0.0.1:6010` (please check your port with "vagrant port" if this is not working).
+- Load the mtrk viewer in a web browser at the URL `127.0.0.1:6010` (please check your port with `vagrant port` if this is not working).
 - Upload the "gre2d.mtrk" file.
 - Use the zoom options to zoom on an elementary pattern of the sequence.
 - Hover over RF pulses, gradients, and ADC events to check their names and amplitudes.
