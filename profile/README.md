@@ -96,7 +96,7 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
 - Close the parameters window.
 - You can do the same for RF pulses and ADC events. 
 - Click on the "reset" button and confirm you want to reset the page.
-- Import the "gre2d.mtrk" file provided in ??? using the upload button.
+- Import the "gre2d.mtrk" file provided in the "testData" folder using the upload button.
 - Check the structure of the sequence with the "loops" button.
 - Check the header of the sequence ie with the "settings" button.
 - Select "block_TR" in the block browser.
@@ -118,7 +118,8 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
 - Do the same with the "output_dsl_file.mtrk" and verify that the changes are properly reflected.
 
 ### Conversion to pulseq
-- Go to "mtrk_designer_gui/app/mtrk_designer_api" and open 
+- Go to "mtrk_designer_gui/app/mtrk_designer_api" and open "mtrkToPulseqConverter.py" and input the name of the file you want to convert line 14 and its Pulseq file name line 15.
+- Convert both "gre2d.mtrk" and "output_sdl_file.mtrk" and compare the output diagram to the one observed in the mtrk viewer. 
 
 
 
