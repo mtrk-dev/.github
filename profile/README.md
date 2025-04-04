@@ -26,10 +26,6 @@ mtrk provides a graphical user interface (mtrk_designer_gui), which enables the 
 
 To improve accessibility, the SDL format can be converted to Pulseq, which is already widely used in open-source pulse sequence programming. We are also working on a converter from Pulseq to SDL to make the connexion between the two formats smoother. 
 
-<p align="center">
-  <img src="mtrk_ui.png" width="886"/>
-</p>
-
 ## Reproducibility
 
 When executing an mtrk sequence, the MRI scanner plays out the instructions and pulses contained in the mtrk file. This means that the pulse sequence is entirely defined by the mtrk file and not dependent on the specific MRI software version used during data acquisition. Hence, researchers can reproduce scientific results at a later time or at a different location because the mtrk file can be easily archived or distributed. Because the SDL format is decoupled from the vendor SDKs, the mtrk files can be shared in Git repositories attached to publications without violating license agreements, and they do not require refactoring for every software update installed on the MRI scanners.
@@ -101,7 +97,7 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
   <img src="mtrkTutoDesignerExample.png" width="886"/>
 </p>
 
-- Download and import the ["gre2d.mtrk"]([https://pages.github.com/](https://github.com/mtrk-dev/mtrk_designer_api/blob/main/testData/gre2d.mtrk)) file provided in the "mtrk_designer_api/testData" folder using the upload button.
+- Download and import the [gre2d.mtrk](https://github.com/mtrk-dev/mtrk_designer_api/blob/main/testData/gre2d.mtrk) file provided in the "mtrk_designer_api/testData" folder using the upload button.
 - Check the structure of the sequence with the "loops" button.
 - Check the header of the sequence with the "settings" button.
 - Select "block_TR" in the block browser.
