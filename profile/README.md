@@ -89,16 +89,16 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
   <img src="MtrkTutoDesigner.jpg" width="886"/>
 </p>
 
-- After turning the vagrant VM on, load the mtrk designer in a web browser at guest port 5000/5010 (please check your corresponding host port with "vagrant port").
+- After turning the vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with "vagrant port" if this is not working).
 - Choose between dark and light mode for your comfort.
 - Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
 - Click on it to access its parameters.
 - Close the parameters window.
 - You can do the same for RF pulses and ADC events. 
 - Click on the "reset" button and confirm you want to reset the page.
-- Import the "gre2d.mtrk" file provided in the "testData" folder using the upload button.
+- Download and import the ["gre2d.mtrk"]([https://pages.github.com/](https://github.com/mtrk-dev/mtrk_designer_api/blob/main/testData/gre2d.mtrk)) file provided in the "mtrk_designer_api/testData" folder using the upload button.
 - Check the structure of the sequence with the "loops" button.
-- Check the header of the sequence ie with the "settings" button.
+- Check the header of the sequence with the "settings" button.
 - Select "block_TR" in the block browser.
 - Add an RF event starting at 5.1ms on the RF axis, name it "refocusing_pulse", slect its type as "Refocusing", give it a flip angle of 180 degrees, and select "rf_pulse" and "rf_phase" for its amplitude and phase arrays. Save the changes. 
 - Add a gradient just under this RF pulse on the Slice axis, name it "slice_sel_refocusing", put its start time at 5ms, its amplitude at 4.95mT/m, and select the "grad_100_2650_100" array. Save the changes.
@@ -111,17 +111,25 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
   <img src="MtrkTutoViewer.jpg" width="886"/>
 </p>
 
-- Load the mtrk viewer in a web browser at guest port 6010 (please check your corresponding host port with "vagrant port").
+- Load the mtrk viewer in a web browser at the URL `127.0.0.1:6010` (please check your port with "vagrant port" if this is not working).
 - Upload the "gre2d.mtrk" file.
 - Use the zoom options to zoom on an elementary pattern of the sequence.
 - Hover over RF pulses, gradients, and ADC events to check their names and amplitudes.
-- Do the same with the "output_dsl_file.mtrk" and verify that the changes are properly reflected.
+- Do the same with the "output_sdl_file.mtrk" and verify that the changes are properly reflected.
 
 ### Conversion to pulseq
-- Go to "mtrk_designer_gui/app/mtrk_designer_api" and open "mtrkToPulseqConverter.py" and input the name of the file you want to convert line 14 and its Pulseq file name line 15.
-- Convert both "gre2d.mtrk" and "output_sdl_file.mtrk" and compare the output diagram to the one observed in the mtrk viewer. 
 
+<p align="center">
+  <img src="MtrkTutoPulseq.jpg" width="886"/>
+</p>
 
+- Clone the mtrk_designer_api repo (you can create a virtual environment to contain the python libraries installation) and go to the "mtrk_designer_api" folder.
+```
+git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
+cd mtrk_designer_api
+```
+- Run `pip install -r requirements.txt` to install the required dependencies.
+- Convert both "testData/gre2d.mtrk" and "testData/output_sdl_file.mtrk" into "testData/gre2d.seq" and "testData/output_sdl_file.seq" by running `python mtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagram to the one observed in the mtrk viewer. 
 
 
 ## Related publications
