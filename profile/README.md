@@ -96,6 +96,11 @@ This is a quick guide to getting started with mtrk. It covers how to use the GUI
 - Close the parameters window.
 - You can do the same for RF pulses and ADC events. 
 - Click on the "reset" button and confirm you want to reset the page.
+
+<p align="center">
+  <img src="mtrkTutoDesignerExample.png" width="886"/>
+</p>
+
 - Download and import the ["gre2d.mtrk"]([https://pages.github.com/](https://github.com/mtrk-dev/mtrk_designer_api/blob/main/testData/gre2d.mtrk)) file provided in the "mtrk_designer_api/testData" folder using the upload button.
 - Check the structure of the sequence with the "loops" button.
 - Check the header of the sequence with the "settings" button.
