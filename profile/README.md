@@ -132,7 +132,7 @@ git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 cd mtrk_designer_api
 ```
 - Run `pip install -r requirements.txt` to install the required dependencies.
-- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python mtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagram to the one observed in the mtrk viewer. 
+- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python mtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagrams to the ones observed in the mtrk viewer. 
 
 
 ## Related publications
