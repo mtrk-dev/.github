@@ -44,7 +44,9 @@ To learn more, please take a look at the mtrk [Documentation](https://mtrk-dev.g
 
 A quick test installation of the MTRK tools (prototype state) can be done using Vagrant, which will provision a VM and install the software automatically into the VM.
 
-Install both VirtualBox (https://www.virtualbox.org) and Vagrant (https://www.vagrantup.com) on your host computer. This can be done using any computer with an Intel chipset (Windows, Linux, Intel-based Apple Mac).
+Install both [VirtualBox](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com) on your host computer. This can be done using any computer with an Intel chipset (Windows, Linux, Intel-based Apple Mac).
+
+Run a terminal with admin rights.
 
 Clone the MTRK Designer GUI repository into a folder on your computer:
 
@@ -57,13 +59,13 @@ cd mtrk_designer_gui
 vagrant up
 ```
 
-This will create a new VM and install all required dependencies. Once the installation has finished, the MTRK Designer GUI and MTRK Viewer Software can be accessed by opening the URLs `127.0.0.1:5010` and `127.0.0.1:6010` respectively in a modern browser (Firefox or Chrome).
+This will create in a few minutes a new VM and install all required dependencies. Once the installation has finished, the MTRK Designer GUI and MTRK Viewer Software can be accessed by opening the URLs `127.0.0.1:5010` and `127.0.0.1:6010` respectively in a modern browser (Firefox or Chrome).
 
 If the page is not visible at the designated port. Run the `vagrant port` command to see if the port has been auto-forwarded due to a collision and access the tool on that port.
 
 ### Server Installation
 
-Automatic installation on a production server can be done using a provided installation script. MTRK currently requires **Ubuntu 22.04 LTS** as the operating system.
+Automatic installation on a production server can be done using a provided installation script. MTRK currently requires **Ubuntu 22.04 LTS** as the operating system, although the api can be operated on any machine running Python.
 
 Check out the repositories on the server and start the installation:
 ```
@@ -77,7 +79,7 @@ sudo bash /opt/mtrk_designer_gui/install.sh
 
 ## Getting started
 
-This is a quick guide to getting started with mtrk. It covers how to use the GUI to import and modify a sequence described in an SDL file, how to use the viewer to visualize it, and how to run the converter to generate the corresponding Pulseq file. 
+This is a quick tutorial to getting started with mtrk. It covers how to use the GUI to import and modify a sequence described in an SDL file, how to use the viewer to visualize it, and how to run the converter to generate the corresponding Pulseq file. 
 
 ### mtrk designer
 
