@@ -87,12 +87,14 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
   <img src="MtrkTutoDesigner.jpg" width="886"/>
 </p>
 
-- After turning the vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with `vagrant port` if this is not working).
+- After turning the Vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with `vagrant port` if this is not working).
 - Choose between dark and light mode for your comfort.
 - Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
 - Click on it to access its parameters.
 - Close the parameters window.
-- You can do the same for RF pulses and ADC events. 
+- You can do the same for RF pulses and ADC events.
+- Move events either by redifining their start time or by pressing SHIFT and sliding the waveform on its axis.
+- Press CTRL and clock on several events to select them. Then, press the "+" buttin in the UI (under the event browser) to create a block. Click on it to adjust its parameters. Click on the loops button to modify its number of iterations. 
 - Click on the "reset" button and confirm you want to reset the page.
 
 <p align="center">
@@ -120,7 +122,7 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
 - Hover over RF pulses, gradients, and ADC events to check their names and amplitudes.
 - Do the same with the "output_sdl_file.mtrk" and verify that the changes are properly reflected.
 
-### Conversion to pulseq
+### Conversion to Pulseq
 
 <p align="center">
   <img src="MtrkTutoPulseq.jpg" width="886"/>
