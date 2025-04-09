@@ -91,11 +91,12 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
 - After turning the Vagrant VM on, load the mtrk designer in a web browser at the URL `127.0.0.1:5010` (please check your port with `vagrant port` if this is not working).
 - Choose between dark and light mode for your comfort.
 - Drag and drop a gradient event from the event bar to any gradient line (Readout/Phase/Slice).
-- Click on it to access its parameters.
+- Click on it to access its parameters. Give it a name and select an array for its waveform.  
 - Close the parameters window.
-- You can do the same for RF pulses and ADC events.
+- You can do the same for RF pulses.
+- ADC events generate their own waveforms, you can create one, give it a name and a duration.
 - Move events either by redifining their start time or by pressing SHIFT and sliding the waveform on its axis.
-- Press CTRL and clock on several events to select them. Then, press the "+" buttin in the UI (under the event browser) to create a block. Click on it to adjust its parameters. Click on the loops button to modify its number of iterations. 
+- Press CTRL and click on several events to select them. Then, press the "+" button in the UI (under the event browser) to create a block. Click on it to adjust its parameters. Click on the loops button to modify its number of iterations. 
 - Click on the "reset" button and confirm you want to reset the page.
 
 <p align="center">
