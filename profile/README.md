@@ -58,6 +58,7 @@ Change the directory and run the vagrant command:
 cd mtrk_designer_gui
 vagrant up
 ```
+(optional) You can open VirtualBox to check the status of the VM. 
 
 This will create in a few minutes a new VM and install all required dependencies. Once the installation has finished, the MTRK Designer GUI and MTRK Viewer Software can be accessed by opening the URLs `127.0.0.1:5010` and `127.0.0.1:6010` respectively in a modern browser (Firefox or Chrome).
 
