@@ -130,13 +130,15 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
   <img src="MtrkTutoPulseq.jpg" width="886"/>
 </p>
 
+The Pulseq file is automatically generated when the download button is clicked. However, to inspect the sequence using the PyPulseq plots, it is necessary to run this script outside of the Vagrant setting. 
+
 - Clone the mtrk_designer_api repo (you can create a virtual environment to contain the python libraries installation) and go to the "mtrk_designer_api" folder.
 ```
 git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 cd mtrk_designer_api
 ```
 - Run `pip install -r requirements.txt` to install the required dependencies.
-- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python mtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagrams to the ones observed in the mtrk viewer. 
+- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python manualMtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagrams to the ones observed in the mtrk viewer. 
 
 
 ## Related publications
