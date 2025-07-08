@@ -1,24 +1,24 @@
 # Outline
-1. [What is mtrk?](#1-what-is-mtrk)  
-   1.1 Flexibility  
-   1.2 Accessibility  
-   1.3 Reproducibility  
-   1.4 Transparency  
-   1.5 Documentation
-3. Installation  
-   2.1 Test Installation (using Vagrant)  
-   2.2 Server Installation  
-4. Getting started  
-   3.1 mtrk designer  
-   3.2 mtrk viewer  
-   3.3 Conversion to Pulseq  
-   3.4 Automatic waveform generation  
-   3.5 Available k-space readout blocks  
-   3.6 mtrk applications programming interface (API)  
-5. Related publications  
-   4.1 Journal papers  
-   4.2 Conferences  
-6. Acknowledgements  
+1. [What is mtrk?](#1-what-is-mtrk)    
+   1.1 [Flexibility](#11-flexibility)   
+   1.2 [Accessibility](#12-accessibility)  
+   1.3 [Reproducibility](#13-reproducibility)  
+   1.4 [Transparency](#14-transparency)  
+   1.5 [Documentation](#15-documentation)  
+3. [Installation](#2-installation)  
+   2.1 [Test Installation (using Vagrant)](#21-test-installation-using-vagrant)  
+   2.2 [Server Installation](#22-server-installation)  
+4. [Getting started](#3-getting-started)  
+   3.1 [mtrk designer](#31-mtrk-designer)  
+   3.2 [mtrk viewer](#32-mtrk-viewer)  
+   3.3 [Conversion to Pulseq](#33-conversion-to-pulseq)  
+   3.4 [Automatic waveform generation](#34-automatic-waveform-generation)  
+   3.5 [Available k-space readout blocks](#35-available-k-space-readout-blocks)  
+   3.6 [mtrk applications programming interface (API)](#36-mtrk-applications-programming-interface-api)  
+5. [Related publications](#4-related-publications)  
+   4.1 [Journal papers](#41-journal-papers)  
+   4.2 [Conferences](#42-conferences)  
+6. [Acknowledgements](#5-acknowledgements)  
 
 # 1. What is mtrk?
 
