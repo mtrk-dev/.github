@@ -1,4 +1,26 @@
-## What is mtrk?
+# Outline
+1. [What is mtrk?](#1-what-is-mtrk)  
+   1.1 Flexibility  
+   1.2 Accessibility  
+   1.3 Reproducibility  
+   1.4 Transparency  
+   1.5 Documentation
+3. Installation  
+   2.1 Test Installation (using Vagrant)  
+   2.2 Server Installation  
+4. Getting started  
+   3.1 mtrk designer  
+   3.2 mtrk viewer  
+   3.3 Conversion to Pulseq  
+   3.4 Automatic waveform generation  
+   3.5 Available k-space readout blocks  
+   3.6 mtrk applications programming interface (API)  
+5. Related publications  
+   4.1 Journal papers  
+   4.2 Conferences  
+6. Acknowledgements  
+
+# 1. What is mtrk?
 
 mtrk is a novel concept for developing and working with pulse sequences in Magnetic Resonance Imaging (MRI). Traditionally, MRI pulse sequences are developed as dynamically loadable binary libraries, programmed using vendor-provided proprietary SDKs. These monolithic SDKs are complex, barely documented, and only in part accessible to external developers and members of the MRI research community. This makes MRI development very challenging - on the one hand because only few researchers manage to work with the SDKs, on the other hand because frequent invasive changes to the vendor SDKs create significant maintenance effort. Furthermore, strict license agreements make dissemination of research developments impossible and contend with the idea of reproducible research.
 
@@ -12,7 +34,7 @@ A conversion tool is also available in mtrk_designer_api to transform .mtrk file
   <img src="mtrk_overview.png" width="529"/>
 </p>
 
-## Flexibility
+## 1.1 Flexibility
 
 mtrk uses a highly modular design in which sequences are formulated using a Sequence Description Language (SDL) based on the common JSON syntax. The SDL is un-opinionated, meaning that multiple ways for formulating one sequence exist. Moreover, the SDL makes no assumption on how the SDL files have to be generated, giving researchers the freedom of choice regarding which programming language they want to use for their sequence development projects. Moreover, because the SDL is a common text-based format, the sequence calculation can be done on any operating system and on any computer, ranging from the MRI scanner’s console computer over local research servers to cloud instances.
 
@@ -20,27 +42,27 @@ mtrk uses a highly modular design in which sequences are formulated using a Sequ
   <img src="mtrk_sdl.png" width="886"/>
 </p>
 
-## Accessibility
+## 1.2 Accessibility
 
 mtrk provides a graphical user interface (mtrk_designer_gui), which enables the development of pulse sequences in an intuitive way without programming. This web-based GUI is intended to be used both for education and training, as well as for research applications later on. It has for now been used to implement simple sequences, such as spin echo and gradient echo with single line readout, but will soon be able to handle more complex ones. 
 
 To improve accessibility, the SDL format can be converted to Pulseq, which is already widely used in open-source pulse sequence programming. We are also working on a converter from Pulseq to SDL to make the connexion between the two formats smoother. 
 
-## Reproducibility
+## 1.3 Reproducibility
 
 When executing an mtrk sequence, the MRI scanner plays out the instructions and pulses contained in the mtrk file. This means that the pulse sequence is entirely defined by the mtrk file and not dependent on the specific MRI software version used during data acquisition. Hence, researchers can reproduce scientific results at a later time or at a different location because the mtrk file can be easily archived or distributed. Because the SDL format is decoupled from the vendor SDKs, the mtrk files can be shared in Git repositories attached to publications without violating license agreements, and they do not require refactoring for every software update installed on the MRI scanners.
 
-## Transparency
+## 1.4 Transparency
 
 With the traditional development model, sequence binaries are black-boxes in the sense that it is unclear how the sequence settings translate into DSP instructions. Moreover, because part of the functions are hard-coded into the MRI software platform and can change with every release, it is impossible to say which exact waveforms and timings were used to acquire the data. With mtrk on the other hand, all instructions can transparently be read form the mtrk file. This enables exact Bloch simulations of the sequence, so that automated testing and quality control of sequences is possible. Furthermore, part of the development work can be shifted from sitting in front of an MRI scanner towards simulation-driven development.
 
-## Documentation
+## 1.5 Documentation
 
 To learn more, please take a look at the mtrk [Documentation](https://mtrk-dev.github.io/doc/). Please note that mtrk is still under active development, so that the code and documentation may not be complete yet and evolve over time. Please also don’t hesitate to get in touch with us if you like to contribute to the development.
 
-## Installation
+# 2. Installation
 
-### Test Installation (using Vagrant)
+## 2.1 Test Installation (using Vagrant)
 
 A quick test installation of the MTRK tools (prototype state) can be done using Vagrant, which will provision a VM and install the software automatically into the VM.
 
@@ -64,7 +86,7 @@ This will create in a few minutes a new VM and install all required dependencies
 
 If the page is not visible at the designated port. Run the `vagrant port` command to see if the port has been auto-forwarded due to a collision and access the tool on that port.
 
-### Server Installation
+## 2.2 Server Installation
 
 Automatic installation on a production server can be done using a provided installation script. MTRK currently requires **Ubuntu 22.04 LTS** as the operating system, although the api can be operated on any machine running Python.
 
@@ -78,11 +100,11 @@ git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 sudo bash /opt/mtrk_designer_gui/install.sh
 ```
 
-## Getting started
+# 3. Getting started
 
 This is a quick tutorial to getting started with mtrk. It covers how to use the GUI to import and modify a sequence described in an SDL file, how to use the viewer to visualize it, and how to run the converter to generate the corresponding Pulseq file. 
 
-### mtrk designer
+## 3.1 mtrk designer
 
 <p align="center">
   <img src="MtrkTutoDesigner.jpg" width="886"/>
@@ -112,7 +134,7 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
 - Click on the "Download" button to download an updated SDL file "output_sdl_file.mtrk".
 - (Optional) Open both SDL files (gre2d.mtrk and output_sdl_file.mtrk) and compare them.
 
-### mtrk viewer
+## 3.2 mtrk viewer
 
 <p align="center">
   <img src="MtrkTutoViewer.jpg" width="886"/>
@@ -124,7 +146,7 @@ This is a quick tutorial to getting started with mtrk. It covers how to use the 
 - Hover over RF pulses, gradients, and ADC events to check their names and amplitudes.
 - Do the same with the "output_sdl_file.mtrk" and verify that the changes are properly reflected.
 
-### Conversion to Pulseq
+## 3.3 Conversion to Pulseq
 
 <p align="center">
   <img src="MtrkTutoPulseq.jpg" width="886"/>
@@ -138,15 +160,48 @@ git clone --depth 1 https://github.com/mtrk-dev/mtrk_designer_api.git
 cd mtrk_designer_api
 ```
 - Run `pip install -r requirements.txt` to install the required dependencies.
-- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python manualMtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagrams to the ones observed in the mtrk viewer. 
+- Convert both `testData/gre2d.mtrk` and `testData/output_sdl_file.mtrk` into `testData/gre2d.seq` and `testData/output_sdl_file.seq` by running `python manualMtrkToPulseqConverter.py` (it will prompt for file names in the console) and compare the output diagrams to the ones observed in the mtrk viewer.
 
+## 3.4 Automatic waveform generation
 
-## Related publications
+<p align="center">
+  <img src="WaveformGeneration.jpg" width="886"/>
+</p>
 
-### Journal papers
+The mtrk designer embeds tools for assisted waveform generation for classic gradient and RF pulses. This tool is accessible when creating a new gradient or RF event (see screenshot). The available waveforms include:
+
+For RF pulses:
+* Sinc
+* SLR
+* Adiablatic (BIR-4, WURST, Hyperbolic)
+
+For gradient pulses: 
+* Manual trapezoid
+* Optimal trapezoid
+* Ramp sampled optimal trapezoid
+
+## 3.5 Available k-space readout blocks
+
+Several pre-calculated blocks for readout strategies are also available. They use the field of view (FOV) and resolution defined in the settings to calculate the right waveforms and insert them in the current sequence.
+
+Available readout trajectories:
+* Cartesian
+* Echo-planar
+* Radial
+* Spiral
+
+For a complete tutorial about readout blocks, please visit this [page](https://github.com/mtrk-dev/ISMRM-2025-Surfing-School-Hands-On-Open-Source-MR).
+
+## 3.6 mtrk applications programming interface (API)
+
+It is also possible to use directly the mtrk Python API without using the GUI. An example of a sequence is provided in [`se2d_generator.py`](https://github.com/mtrk-dev/mtrk_designer_api/blob/main/se2d_generator.py). By using the API to develop a sequence, it is possible to be more flexible on the sequence design and to implement new features like custom block generation or new sequence bases. 
+
+# 4. Related publications
+
+## 4.1 Journal papers
 - Artiges A, Singh Saimbhi A, Castillo-Passi C, Lattanzi R, and Block KT, mtrk - A flexible environment for developing open-source MRI pulse sequences, submitted to MRM in March 2025.
 
-### Conferences
+## 4.2 Conferences
 - Artiges A., Singh Saimbhi A., Wiggins R., Lattanzi R., and Block KT., mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards. International Society for Magnetic Resonance in Medicine (ISMRM, 2024) - Poster presentation.(https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=5911). Includes a video demo of the software.
 - Artiges A, Singh Saimbhi A, Wiggins R, Castillo-Passi C, Montin E, Giannakopoulos I, Lattanzi R, and Block KT, mtrk – An intuitive and open-source development kit for MRI pulse sequences. MRI Together workshop 2025 - Oral presentation. (Best abstract award - 2nd place, recording on YouTube: https://www.youtube.com/watch?v=KraT1FKSTcc)
 - Artiges A, Singh Saimbhi A, Wiggins R, Castillo-Passi C, Montin E, Giannakopoulos I, Lattanzi R, and Block KT, mtrk - Un environnement intuitif pour le développement de séquences IRM libres de droits. Bi-annual meeting of the SFRMBM (France) 2025 - Poster presentation.
@@ -156,7 +211,7 @@ cd mtrk_designer_api
 
 Contact: anais.artiges@nyulangone.org
 
-### Acknowledgements
+# 5. Acknowledgements
 
 <p align="center">
   <img src="cloud_mr_logo.png" width="200"/>
